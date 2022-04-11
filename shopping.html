@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AFRIZ CART</title>
+</head>
+<style>
+	body{
+		margin:0 auto;
+		width:100%;
+		background-color:grey;
+	}
+	.heading1{
+		background: none;
+		height:2.5%;
+		border-bottom: 3px groove darkred;
+	}
+	#items p{
+		text-align:center;
+		font-family: cursive;
+		font-size:20px;
+		font-style: bold;
+		color:mediumturquoise;
+		border:1px solid black;
+		border-radius: 30px;
+		border: none;
+		background-color: red;
+	}
+	#act{
+        display:block;
+    }
+    #inact{
+        display:none;
+    }
+    .carousel4 img{
+    	width:20px;
+    	height:20px;
+    	display: center;
+    }
+    .heading2{
+    	width:100%;
+    	height:15%;
+    	background: linear-gradient(to right, mediumblue, skyblue);
+    	display:flex;
+    }
+    #h21{
+    	margin:auto 1%;
+    	display:flex;
+    }
+    #h21 img{
+    	width:10%;
+    	height:5%;
+    	border:1px solid red;
+    	border-radius: 40%;
+    	margin:auto 0%;
+    }
+    #h21 h2{
+    	margin-left: 1%;
+    	font-size: 40px;
+    }
+    #menu{
+    	display: flex;
+    	list-style-type: none;
+    }
+    #menu li{
+    	padding:25px;
+    }
+    #menu li a{
+    	text-decoration: none;
+    }
+    #menu li img{
+    	width:20px;
+    	height:20px;
+    }
+    #spin{
+    	font-size: 15px;
+    	color:blue;
+    	display:none;
+    	position:absolute;
+    	background:transparent;
+    }
+    .d1:hover #spin{
+    	display:block;
+    }
+    #menu li img:hover{
+    	width:23px;
+    	height:23px;
+    }
+    
+    .dropdown{
+		display: inline-block;
+		color:darkslategray;
+		font-size:15px;
+	}
+	ol{
+		list-style-type: none;
+	}
+	.dropdownc{
+		display: none;
+		position: absolute;
+		text-align: center;
+		background-color: transparent;
+		min-width:80px;
+		color:blue;
+	}
+	.dropdown:hover .dropdownc{
+		display:block;
+	}
+	.heading3{
+		height:700px;
+		display:flex;
+	}
+	.h31{
+		width:25%;
+		border:1px outset gray;
+		border-radius: 3%;
+		border:none;
+		background-color: black;
+		margin:1% 1%;
+	}
+	#text{
+		margin-right:0%;
+		margin-bottom: 4%;
+		margin-top: 4%;
+		margin-left: 3%;
+		width:300px;
+		height:40px;
+		border:3px inset black;
+		border-radius: 30px;
+		border:none;
+		background-color: ivory;
+	}
+	#text::placeholder{
+		color: blue;
+		padding-left: 15px;
+	}
+	#lol{
+		position:absolute;
+		width:10px;
+		height:10px;
+		border:none;
+		top:34%;
+		left:20%;
+	}
+	.h32{
+		border: 1px solid blue;
+		border-radius: 2%;
+		border:none;
+		width:75%;
+		background:linear-gradient(powderblue, paleturquoise, powderblue);
+		margin:0.5% 1%;
+		
+	}
+	#blur{
+		margin:5% 5%;
+		width:700px;
+		position: absolute;
+		color:red;
+		font-size:50px;
+		text-shadow: 3px 3px black;
+	}
+	.hull{
+		display:flex;
+	}
+	.h32 img{
+		width:700px;
+		height:400px;
+		margin:15% 0%;
+	}
+	.writeup{
+		margin-top: 25%;
+		margin-bottom: 7%;
+		margin-left:0%;
+		margin-right: 3%;
+		float: right;
+		text-align: center;
+		color: blue;
+	}
+	#press{
+		background:transparent;
+		color: black;
+		font-family:cursive;
+	}
+.footer{
+	height: 500px;
+	background-color: black;
+	margin:0% 1%;
+	
+}
+.foot{
+	display: flex;
+	padding-top:1%;
+	padding-bottom: 2%;
+
+}
+.footer1{
+	margin:auto 1%;
+	width:25%;
+	height:350px;
+}
+figure{
+	margin:2% 3%;
+}
+#img1{
+	width:20%;
+	height:20%;
+	border:1px solid black;
+	border-radius:40%;
+}
+#apt{
+	font-size:10px;
+	color: white;
+	font-family: serif;
+	top:0%;
+}
+.footer1 h3{
+	font-size: 20px;
+	color:mediumturquoise;
+	padding-left: 10px;
+}
+.footer1 p{
+	font-size:13px;
+	color: azure;
+	min-width: 50px;
+	padding-left: 10px;
+	top: 0%;
+}
+.footer1 h4{
+	font-size:15px;
+	font-weight: lighter;
+	color: mediumturquoise;
+	padding-top:2%;
+	padding-bottom: 0%;
+}
+#img2{
+	width:15px;
+	height:15px;
+}
+ul{
+	list-style-type: none;
+	display: inline-block;
+	margin:0% 0%;
+	padding:0% 10px;
+}
+#img3{
+	width:15px;
+	height:15px;
+}
+span{
+	font-size: 10px;
+	color:azure;
+	padding-left: 10px;
+}
+.footer2{
+	margin:auto 1%;
+	width:25%;
+	height:350px;
+}
+.footer2 ul{
+	list-style-type: none;
+	display: inline-block;
+	padding:7% 15px;
+}
+.footer2 h3{
+	color: mediumturquoise;
+	font-size: 20px;
+}
+.footer2 li{
+	padding:7% 0px;
+	color: azure;
+	font-size:15px;
+}
+.footer3{
+	margin:auto 1%;
+	width:25%;
+	height:350px;
+}
+.footer3 ul{
+	list-style-type: none;
+	display: inline-block;
+	padding:7% 15px;
+}
+.footer3 h3{
+	color: mediumturquoise;
+	font-size: 20px;
+}
+.footer3 li{
+	padding:7% 0px;
+	color: azure;
+	font-size:15px;
+}
+.footer4{
+	margin:auto 1%;
+	width:25%;
+	height:350px;
+}
+.footer4 ul{
+	list-style-type: none;
+	display: inline-block;
+	padding:15% 15px;
+}
+.footer4 h3{
+	color: azure;
+	font-size: 20px;
+}
+.footer4 li{
+	padding:5% 0px;
+}
+#ade{
+	width:250px;
+	height:40px;
+	border:2px solid black;
+	border-radius: 10px;
+
+}
+#ade::placeholder{
+	color: blue;
+	padding-left:17%;
+
+}
+#blowe{
+	position:absolute;
+	width:11px;
+	height:11px;
+	top:auto;
+	left:78%;
+	top:157.5%;
+}
+.footer4 li button{
+	width:100px;
+	height:40px;
+	font-size: 15px;
+	color:blue;
+	background-color: mediumturquoise;
+	border:2px solid black;
+	border-radius: 10px;
+}
+.foot1{
+	display: flex;
+	text-align: center;
+	margin:auto 1%;
+	margin-left:34%;
+	margin-top:1%;
+}
+.foot2{
+	display:flex;
+	width:300px;
+	padding:0px 10px;
+}
+.foot2 img{
+	width:15px;
+	height:15px;
+	border:1px solid white;
+	border-radius: 50%;
+	border: none;
+	background-color: mediumturquoise;
+	margin:auto 7%;
+	padding:3px;
+}
+.foot3{
+	float:right;
+	margin-left:30%;
+	width:500px;
+}
+.foot3 p{
+	font-size: 10px;
+	color:azure;
+}
+</style>
+<body>
+	<div class="heading1">
+		<div id="items">
+            <div class="carousel1 ">
+                 <p>BUY THE BEST FROM AFRIZ!</p>
+            </div>
+            <div class="carousel3">
+                <p>30% DISCOUNT FOR OUR LOYAL CUSTOMERS!</p>
+            </div>
+            <div class="carousel4">
+                <p>SHOP WITH YOUR CREDIT CARD</p>
+            </div>
+            <div class="carousel4">
+                <p>FROM THE BEST SUPPLIERS!</p>
+            </div>
+            <div class="carousel4">
+                <p>BEGIN <img src="button.png"></p>
+            </div>
+         </div>                 
+	</div>
+	<div class="heading2">
+		<div id="h21">
+			<img src="first design.jpg"><h2>AFRIZ CART</h2>
+		</div>
+		<nav id="h22">
+			<ul id="menu">
+				<li class="d1"><a href="#"><img src="home.png"></a>
+					<span id="spin">HOME</span>
+				</li>
+				<li class="dropdown"><a href="#"><img src="list.png" ></a>
+					<ol class="dropdownc">
+						<li>Catalogue</li>
+						<hr width="100%">
+						<li>Discount</li>
+						<hr width="100%">
+						<li>Sales</li>
+					</ol>
+				</li>
+				<li class="d1"><a href="#"><img src="cubes.png"></a>
+					<span id="spin">SERVICES</span>
+				</li>
+				<li class="d1"><a href="#"><img src="online-shopping.png"></a>
+					<span id="spin">CART</span>
+				</li>
+				<li><a href="#"><img src="contact-mail.png"></a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="heading3">
+		<div class="h31">
+			<input type="search" name="engine" placeholder="Find Product" id="text">
+			<button type="submit" id="lol">&#128269;</button>
+
+
+
+		</div>
+		<div class="h32">
+			<marquee direction="right" id="blur">WELCOME TO AFRIZ CART</marquee>
+			<div class="hull">
+				<img src="bluth.jpg">
+			    <div class="writeup">
+					<h2>Online Shopping</h2>
+					<p>Afriz Cart is here to give you the best
+					   online shopping experience. Purchase up to
+					   #10,000 worth of product and get a 30% discount
+					   on the next three purchases. Use of credit card
+					   is allowed.
+					</p>
+					<button id="press">READ MORE</button>
+			    </div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="footer">
+		<div class="foot">
+			<div class="footer1">
+				<figure>
+					<img src="first design.jpg" id="img1">
+					<figcaption id="apt">Get the best..</figcaption>
+				</figure>
+				<br>
+				<h3>About Us</h3>
+				<p>We want to help you get the best online shopping experience
+				   without any trouble. Hop on the sailing ship!
+				</p>
+				<ul>
+					<h4>Contact Us</h4>
+					<li><img src="phone-call.png" id="img2"><span>+234 902 7245178</span></li>
+					<li><img src="email.png" id="img3"><span><a href="Mailto:ezeblessing0125@gmail.com">
+						ezeblessing0125@gmail.com</a></span></li>
+					
+				</ul>
+				
+			</div>
+			<div class="footer2">
+				<ul>
+					<h3>Information</h3>
+					<li>About Us</li>
+					<li>More Search</li>
+					<li>Blog</li>
+					<li>Testimonials</li>
+					<li>Events</li>
+				</ul>
+			</div>
+			<div class="footer3">
+				<ul>
+					<h3>Helpful Links</h3>
+					<li>Services</li>
+					<li>Supports</li>
+					<li>Terms & Conditions</li>
+					<li>Privacy Policy</li>
+				</ul>
+			</div>
+			<div class="footer4">
+				<ul>
+					<h3>Subscribe More Info</h3>
+					<li><input type="text" name="" id="ade" placeholder="Enter your Email">
+						<img src="email.png" id="blowe"></li>
+					<li><button>Subscribe</button></li>
+				</ul>
+			</div>
+		</div>
+		<hr width="100%">
+		<div class="foot1">
+			<div class="foot2">
+				<img src="facebook (1).png">
+				<img src="google-plus-logo.png">
+				<img src="twitter (1).png">
+				<img src="instagram (1).png">
+			</div>
+			<div class="foot3">
+				<p>2021 &copy; AfrizCart All Right reserved</p>
+			</div>
+		</div>
+		
+	</div>
+	
+
+
+
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script>
+    let will = Array.from(document.getElementById('items').children);
+	let timer = 0;
+
+	setInterval(() => {
+	    timer++;
+	    if(timer === 31){
+	        timer = 0;
+	        timer++;
+	    }
+	    if(timer <= 6){
+	        will[0].setAttribute('id', 'act');
+	        will[1].setAttribute('id','inact');
+	        will[2].setAttribute('id', 'inact');
+	        will[3].setAttribute('id', 'inact');
+	        will[4].setAttribute('id', 'inact');
+	    }else if(timer > 7 && timer <= 13){
+	        will[0].setAttribute('id', 'inact');
+	        will[1].setAttribute('id','act');
+	        will[2].setAttribute('id', 'inact');
+	        will[3].setAttribute('id', 'inact');
+	        will[4].setAttribute('id', 'inact');
+	    }else if(timer > 14 && timer <= 19){
+	        will[0].setAttribute('id', 'inact');
+	        will[1].setAttribute('id','inact');
+	        will[2].setAttribute('id', 'act');
+	        will[3].setAttribute('id', 'inact');
+	        will[4].setAttribute('id', 'inact');
+	    }else if(timer > 20 && timer < 25){
+	        will[0].setAttribute('id', 'inact');
+	        will[1].setAttribute('id','inact');
+	        will[2].setAttribute('id', 'inact');
+	        will[3].setAttribute('id', 'act');
+	        will[4].setAttribute('id', 'inact');
+	    }else if(timer > 26 && timer < 31){
+	        will[0].setAttribute('id', 'inact');
+	        will[1].setAttribute('id','inact');
+	        will[2].setAttribute('id', 'inact');
+	        will[3].setAttribute('id', 'inact');
+	        will[4].setAttribute('id', 'act');
+	    }
+
+	}, 550);
+
+
+    </script>
+</body>
+</html>
